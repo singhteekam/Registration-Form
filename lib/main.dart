@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String email;
   String password;
-  String name;
+  String name, fname, mname;
   String number;
   bool _obscureText = true;
    String gender;
@@ -71,6 +71,33 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+                
+                Padding(padding: const EdgeInsets.only(top: 10)),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    onChanged: (value) => fname = value,
+                    decoration: InputDecoration(
+                      labelText: "Enter Your Father's Name...",
+                      icon: Icon(Icons.person),
+                    ),
+                  ),
+                ),
+                
+                Padding(padding: const EdgeInsets.only(top: 10)),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    onChanged: (value) => mname = value,
+                    decoration: InputDecoration(
+                      labelText: "Enter Your Mother's Name...",
+                      icon: Icon(Icons.person),
+                    ),
+                  ),
+                ),
+                
                 Row(children: <Widget>[
                   Expanded(
                     child: ListTile(
